@@ -201,7 +201,7 @@ nav ul li a:hover::after {
   gap: 30px;
 }
 .firstSecOfAbout {
-  background: url(/backgrounds/bg1.jpg) no-repeat center center/cover;
+  background: url(backgrounds/bg1.jpg) no-repeat center center/cover;
   width: 40vh;
   /* height: 60vh; */
   height: 80vh;
