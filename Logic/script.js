@@ -24,6 +24,13 @@ $(document).scroll(function() {
     }
   });
   
+$(document).ready(function () {
+    let textArr = [
+        "Web Developer ",
+        "Web Designer"
+    ]
+});
+
 let inputs = document.querySelectorAll("input[type=range]");
 let meter = document.getElementsByClassName("meter");
 // console.log(meter)
