@@ -25,7 +25,6 @@
   background: white;
   position: sticky;
   top: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo {
   text-decoration: none;
@@ -85,19 +84,15 @@ nav ul li a:hover::after {
   background-color: #ffffff;
   padding: 9px;
   color: #000f52;
-  color: #540dff;
   font-size: 16px;
   outline: none;
-  border: 2px solid #540dff;
+  border: 2px solid #000f52;
   font-weight: 900;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(to top left, #4c00ff42,rgba(119, 0, 255, 0.247))bottom left; 
-  background: none;
 }
 .btn:hover {
-  /* background-color: #000f52; */
-  background: linear-gradient(to top left, #540dff,rgb(111, 0, 255))bottom left; 
+  background-color: #000f52;
   color: azure;
 }
 .burger {
@@ -622,7 +617,6 @@ h4 {
   margin-bottom: 3px;
   display: flex;
   justify-content: center;
- 
 }
 .projectPara {
   display: flex;
@@ -667,22 +661,18 @@ h4 {
   background-position-y: center;
   background-size: cover;
   width: 290px;
-  height: 160px;
+  height: 190px;
   border-bottom: 2px solid white;
   border-radius: 10px;
 }
 .projectData {
   padding: 12px;
   /* backdrop-filter: blur(5px); */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .proTit {
   color: rgba(255, 255, 255, 0.884);
-  padding: 2px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.521);
 }
 .proDesc {
-  padding: 3px;
   color: #ffffffb2;
 }
 
@@ -727,7 +717,6 @@ h4 {
   display: flex;
   justify-content: center;
   padding: 10px;
-  margin: 17px;
 }
 .form {
   display: flex;
