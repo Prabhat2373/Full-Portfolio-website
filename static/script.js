@@ -30,6 +30,11 @@ $(document).ready(function () {
         "Web Designer"
     ]
 });
+// $(document).ready(function () {
+//     // $("div[data-scroll="out"]").fadeIn();
+//     $("div[data-scroll="in"]").hide();
+    
+// });
 let inputs = document.querySelectorAll("input[type=range]");
 let meter = document.getElementsByClassName("meter");
 // console.log(meter)

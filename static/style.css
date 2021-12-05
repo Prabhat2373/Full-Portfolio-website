@@ -25,7 +25,7 @@
   background: white;
   position: sticky;
   top: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo {
   text-decoration: none;
@@ -48,6 +48,10 @@ nav ul li a {
   color: var(--head-color);
   color: #000f52;
   /* padding: 6px; */
+}
+.hireSect a
+{
+  text-decoration: none;
 }
 /* nav ul li a:hover
 {
@@ -84,7 +88,6 @@ nav ul li a:hover::after {
   /* background-color: #4b3d8f; */
   background-color: #ffffff;
   padding: 9px;
-  color: #000f52;
   color: #540dff;
   font-size: 16px;
   outline: none;
@@ -92,12 +95,15 @@ nav ul li a:hover::after {
   font-weight: 900;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(to top left, #4c00ff42,rgba(119, 0, 255, 0.247))bottom left; 
+  background: linear-gradient(to top left, #4c00ff42, rgba(119, 0, 255, 0.247))
+    bottom left;
   background: none;
+  transition: 0.3s ease-in-out;
 }
 .btn:hover {
   /* background-color: #000f52; */
-  background: linear-gradient(to top left, #540dff,rgb(111, 0, 255))bottom left; 
+  background: linear-gradient(to top left, #540dff, rgb(111, 0, 255)) bottom
+    left;
   color: azure;
 }
 .burger {
@@ -130,6 +136,14 @@ nav ul li a:hover::after {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+.bottom
+{
+  position: fixed;
+  box-shadow: 0 0 10px 12px rgba(0, 0, 0, 0.288);
+  bottom: -10px;
+  height: 8px;
+  width: 100%;
+}
 .social-logos {
   display: flex;
   justify-content: flex-end;
@@ -140,6 +154,7 @@ nav ul li a:hover::after {
   flex-direction: row;
   bottom: 60px;
   right: 60px;
+  z-index: 1;
 }
 .logos {
   width: 43px;
@@ -183,66 +198,56 @@ nav ul li a:hover::after {
   color: #ff4242;
   border-left: 2px solid #fff;
 }
-#wrapcont
-{
+#wrapcont {
   display: inline-flex;
   flex-direction: column;
 }
-.static-text
-{
+.static-text {
   font-size: 50px;
   color: rgb(255, 66, 66);
 }
-.dynamic-texts
-{
-    /* margin-left: 15px; */
-    height: 65px;
-    line-height: 65px;
-    /* background: brown; */
-    overflow: hidden;
-    margin-bottom: 4px;
+.dynamic-texts {
+  /* margin-left: 15px; */
+  height: 65px;
+  line-height: 65px;
+  /* background: brown; */
+  overflow: hidden;
+  margin-bottom: 4px;
 }
-.dynamic-texts li
-{
-    color: rgb(255, 66, 66);
-    list-style: none;
-    font-weight: 500;
-    font-size: 60px;
-    position: relative;
-    top: 0;
-    transition: ease-in-out;
-    animation: slide 6s steps(2) infinite;
+.dynamic-texts li {
+  color: rgb(255, 66, 66);
+  list-style: none;
+  font-weight: 500;
+  font-size: 60px;
+  position: relative;
+  top: 0;
+  transition: ease-in-out;
+  animation: slide 6s steps(2) infinite;
 }
-@keyframes slide
-{
-    100%
-    { 
-        top: -140px;    
-    }
+@keyframes slide {
+  100% {
+    top: -140px;
+  }
 }
-.dynamic-texts li span
-{
-    position: relative;
+.dynamic-texts li span {
+  position: relative;
 }
-.dynamic-texts li span::after
-{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #191a1b;
-    left: 0;
-    border-left: 2px solid rgb(255, 66, 66);
-    transition: ease-in;
-    animation: typing 3s steps(12) infinite;
+.dynamic-texts li span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #191a1b;
+  left: 0;
+  border-left: 2px solid rgb(255, 66, 66);
+  transition: ease-in;
+  animation: typing 3s steps(12) infinite;
 }
-@keyframes typing
-{
-    100%
-    {
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
 }
 
 /* code for About Section */
@@ -289,22 +294,19 @@ nav ul li a:hover::after {
   border-bottom: 3px solid;
   display: inline;
 }
-.aboutinfo
-{
+.aboutinfo {
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-content: center;
 }
-.info
-{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.info {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: wheat;
   padding: 10px 5px;
 }
-.infoans
-{
+.infoans {
   color: #ffffffb8;
 }
 .uparrow {
@@ -622,7 +624,6 @@ h4 {
   margin-bottom: 3px;
   display: flex;
   justify-content: center;
- 
 }
 .projectPara {
   display: flex;
@@ -674,16 +675,29 @@ h4 {
 .projectData {
   padding: 12px;
   /* backdrop-filter: blur(5px); */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .proTit {
   color: rgba(255, 255, 255, 0.884);
   padding: 2px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.521);
+  text-decoration: none;
 }
 .proDesc {
+  text-decoration: none;
   padding: 3px;
   color: #ffffffb2;
+}
+.projectBoxes a {
+  text-decoration: none;
+}
+div[data-scroll="in"] {
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+div[data-scroll="out"] {
+  transition: 0.3s;
+  transform: scale(1);
 }
 
 /* code for contact section  */
@@ -790,7 +804,7 @@ h4 {
   height: 100%;
   background: #191a1b;
   color: #ffffffcc;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding-top: 27px;
 }
 .footInside {
@@ -812,19 +826,16 @@ h4 {
   flex-direction: column;
   /* align-items: center;  */
 }
-.serviceUl
-{
+.serviceUl {
   display: flex;
   justify-content: center;
   padding: 17px;
 }
-.serviceUl ol
-{
+.serviceUl ol {
   display: flex;
   flex-direction: column;
 }
-.serviceUl ol li
-{
+.serviceUl ol li {
   list-style: none;
   padding: 12px;
   margin: 3px;
@@ -838,30 +849,25 @@ h4 {
   flex-direction: column;
   /* align-items: center;  */
 }
-.footLinks
-{
+.footLinks {
   display: flex;
   justify-content: center;
 }
-#footul
-{
+#footul {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-#footul li
-{
+#footul li {
   list-style: none;
   padding: 6px;
   margin-top: 13px;
 }
-#footul li a
-{
+#footul li a {
   text-decoration: none;
   color: #ebe5e5b9;
 }
-#footul li a:hover
-{
+#footul li a:hover {
   color: #ffffff;
 }
 .footCont3 {
@@ -869,8 +875,7 @@ h4 {
   width: 30%;
   flex-direction: column;
 }
-.footh1
-{
+.footh1 {
   /* border-bottom: 1px solid #ffff; */
   padding-left: 22%;
 }
@@ -882,21 +887,19 @@ h4 {
   display: flex;
   flex-direction: column;
 }
-.footmain
-{
+.footmain {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footerContainer
-{
+.footerContainer {
   padding: 12px;
   margin: 3px;
 }
-.footerContainer footer
-{
+.footerContainer footer {
   font-size: 1.1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 @media screen and (max-width: 480px) {
   .firstSecOfAbout {
@@ -904,59 +907,48 @@ h4 {
   }
 }
 @media screen and (max-width: 700px) {
-  .footInside{
+  .footInside {
     flex-direction: column;
     align-items: center;
   }
-  .footCont1
-  {
+  .footCont1 {
     width: 90%;
     border-right: none;
     border-bottom: 1px solid #fff;
   }
-  .footCont2
-  {
+  .footCont2 {
     width: 90%;
     border-right: none;
     border-bottom: 1px solid #fff;
   }
-  .footCont3
-  {
+  .footCont3 {
     width: 90%;
   }
-  .footh1
-  {
+  .footh1 {
     padding: 3px;
   }
-  .footLinks
-  {
+  .footLinks {
     margin-right: 25%;
     padding: 17px;
   }
-  .social-logos-foot
-  {
+  .social-logos-foot {
     margin-right: 25%;
-
   }
-
 }
 @media screen and (min-height: 1280px) {
   .overlay {
     height: 95%;
   }
-  #sectAbout
-  {
+  #sectAbout {
     height: 62vh;
   }
   .AboutContainer {
     height: 55vh;
   }
-  .firstSecOfAbout
-  {
+  .firstSecOfAbout {
     height: 56vh;
   }
-  .logoCont
-  {
+  .logoCont {
     bottom: 100px;
   }
 }
@@ -967,12 +959,10 @@ h4 {
   .firstSecOfAbout {
     height: 85vh;
   }
-  #sectAbout
-  {
+  #sectAbout {
     height: 100vh;
   }
-  .info
-  {
+  .info {
     padding: 5px 5px;
     font-size: 14px;
   }
@@ -982,11 +972,9 @@ h4 {
     height: 75vh;
     padding: 2px 40px 9px 14px;
   }
-  #sectAbout
-  {
+  #sectAbout {
     height: 95vh;
   }
-  
 }
 @media screen and (max-width: 530px) {
   .optskillhead {
