@@ -276,7 +276,7 @@ nav ul li a:hover::after {
   gap: 30px;
 }
 .firstSecOfAbout {
-  background: url(/backgrounds/bg1.jpg) no-repeat center center/cover;
+  background: url(./bg1.jpg) no-repeat center center/cover;
   width: 40vh;
   /* height: 60vh; */
   height: 80vh;
@@ -749,7 +749,7 @@ div[data-scroll="out"] {
   justify-content: center;
   border: 2px solid white;
   width: 60%;
-  background: url(/backgrounds/bg5.jpg) no-repeat center center/cover;
+  background: url(./bg5.jpg) no-repeat center center/cover;
   border-radius: 15px;
   box-shadow: 0 0 4px 0px rgba(255, 255, 255, 0.726);
 }
