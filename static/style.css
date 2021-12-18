@@ -184,7 +184,7 @@ nav ul li a:hover::after {
 #txt2 {
   color: var(--secondary-color);
   color: #ff4242;
-  font-size: 88px;
+  font-size: 80px;
   display: block;
 }
 #webtxt {
@@ -691,14 +691,14 @@ h4 {
 .projectBoxes a {
   text-decoration: none;
 }
-/* div[data-scroll="in"] {
-  transition: 0.3s;
-  transform: scale(1.2);
+div[data-scroll="in"] {
+  opacity: 1;
+  transition: 1.5s;
 }
 div[data-scroll="out"] {
-  transition: 0.3s;
-  transform: scale(1);
-} */
+  opacity: 0;
+  transition: 1.5s;
+}
 
 
 /* code for contact section  */

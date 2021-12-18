@@ -13,28 +13,26 @@ $(document).on("click", (e) => {
         $("#line").removeClass("active");
     }
 })
-$(document).scroll(function() {
+$(document).scroll(function () {
     let scrollHt = $(this).scrollTop();
     if (scrollHt > 500) {
-    //   $('#arrow').fadeIn("fast");
-    $(".arrowCont").removeClass("hide");
+        //   $('#arrow').fadeIn("fast");
+        $(".arrowCont").removeClass("hide");
     } else {
-    //   $('#arrow').fadeOut("fast");
-      $(".arrowCont").addClass("hide");
+        //   $('#arrow').fadeOut("fast");
+        $(".arrowCont").addClass("hide");
     }
-  });
-  
+});
+
 $(document).ready(function () {
     let textArr = [
         "Web Developer ",
         "Web Designer"
     ]
 });
-// $(document).ready(function () {
-//     // $("div[data-scroll="out"]").fadeIn();
-//     $("div[data-scroll="in"]").hide();
-    
-// });
+
+
+
 let inputs = document.querySelectorAll("input[type=range]");
 let meter = document.getElementsByClassName("meter");
 // console.log(meter)

@@ -32,9 +32,7 @@ app.post('/contactForm', (req, res) => {
     dataD = []
     dataD.push(data);
     let dataDa = JSON.stringify(dataD);
-    fs.writeFile("data.json","utf-8",()=>{
-        dataDa
-    })
+    fs.writeFileSync("data.json",dataDa)
     let para = { 'Message': 'Your feedback WasSent'}
     res.end(index, para);
 })
