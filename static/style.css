@@ -241,12 +241,22 @@ nav ul li a:hover::after {
   left: 0;
   border-left: 2px solid rgb(255, 66, 66);
   transition: ease-in;
-  animation: typing 3s steps(12) infinite;
+  animation: typing 3s steps(12) infinite,cursor-blink 0.75s step-end infinite;
 }
 @keyframes typing {
   100% {
     left: 100%;
     margin: 0 -35px 0 35px;
+  }
+  
+}
+@keyframes cursor-blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 66, 66);
   }
 }
 
@@ -279,7 +289,7 @@ nav ul li a:hover::after {
   background: url(./bg1.jpg) no-repeat center center/cover;
   width: 40vh;
   /* height: 60vh; */
-  height: 80vh;
+  max-height: 77vh;
 }
 .AboutContainer {
   border: 2px solid white;
@@ -651,7 +661,7 @@ h4 {
   border: 2px solid #fff;
   box-shadow: 0 2px 17px rgb(49, 49, 49);
   width: 290px;
-  height: 290px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1002,6 +1012,17 @@ div[data-scroll="out"] {
   .AboutContainer
   {
       height: 78vh;
+  }
+  
+}
+@media screen and (max-width:680px) {
+  .projectBoxes
+  {
+    width: 70vw;
+  }
+  .projectBoxes img
+  {
+    width: 70vw;
   }
 }
 @media screen and (max-height: 380px) {
