@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const body = require("body-parser");
-const port = 8080;
+const port = 8000;
 const fs = require("fs");
 const exp = require("constants");
+const writeMod = require("./writeFilePro");
+
+const w = new writeMod
 
 let index = fs.readFileSync("static/index.html");
 let index1 = fs.readFileSync("index.html");
@@ -32,8 +35,10 @@ app.post('/contactForm', (req, res) => {
     dataD = []
     dataD.push(data);
     let dataDa = JSON.stringify(dataD);
-    fs.writeFileSync("data.json",dataDa)
+    w.writeFile("data.json",dataDa)
+    // fs.writeFileSync("data.json",dataDa)
     let para = { 'Message': 'Your feedback WasSent'}
+    
     res.end(index, para);
 })
 app.listen(port, () => {

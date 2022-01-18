@@ -22,7 +22,7 @@
         </div>
         <div class="navMenu" id="navmen">
             <ul class="navSect">
-                <li><a href="/" class="active">Home</a></li>
+                <li><a href="#sectHome" class="active">Home</a></li>
                 <li><a href="#sectAbout">About</a></li>
                 <li><a href="#skillSect">Skills</a></li>
                 <li><a href="#ProjectSect">Projects</a></li>
@@ -75,6 +75,7 @@
                 <div class="paraCont">
                     <p class="AboutPara">
                         I'm a web developer with all those skills which every Web Developer should have.
+                        ChecKout my <a class="skillstxt" href="#skillSect">Skills</a>
                     </p>
                 </div>
                 <div class="aboutinfo">
@@ -95,7 +96,7 @@
                 </div>
             </div>
             <div class="uparrow" id="arrow">
-                <div class="arrowCont">
+                <div class="arrowCont hide">
                     <a href="#"><img src="static/up-arrow.png" alt="" class="arrow"></a>
                 </div>
             </div>
@@ -480,7 +481,9 @@
             targets: [
                 ".AboutContainer",
                 ".boxes",
-                ".projectBoxes"
+                ".projectBoxes",
+                ".skillbar",
+                ".skillbar1"
             ]
         });
     </script>

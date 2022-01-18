@@ -4,7 +4,6 @@ $(document).ready(function () {
         $(".burger").toggleClass("active");
         $("#line").toggleClass("active");
     })
-
 });
 $(document).on("click", (e) => {
     if (e.target.id !== "navmen" && e.target.id !== "brg" && e.target.id !== "active" && e.target.id !== "active") {
@@ -23,15 +22,6 @@ $(document).scroll(function () {
         $(".arrowCont").addClass("hide");
     }
 });
-
-$(document).ready(function () {
-    let textArr = [
-        "Web Developer ",
-        "Web Designer"
-    ]
-});
-
-
 
 let inputs = document.querySelectorAll("input[type=range]");
 let meter = document.getElementsByClassName("meter");
