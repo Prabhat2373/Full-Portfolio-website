@@ -1,46 +1,59 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const path = require("path");
-const body = require("body-parser");
+const path = require('path');
+const body = require('body-parser');
 const port = 8000;
-const fs = require("fs");
-const exp = require("constants");
-const writeMod = require("./writeFilePro");
+const fs = require('fs');
+const mongoose = require('mongoose');
 
-const w = new writeMod
+let index = fs.readFileSync('static/index.html');
+let style = fs.readFileSync('static/css/style.css');
 
-let index = fs.readFileSync("static/index.html");
-let index1 = fs.readFileSync("index.html");
-let style = fs.readFileSync("static/style.css");
-
-app.use(express.static("/static"))
-app.use('/static', express.static('static'))
-app.use(express.urlencoded({extended:true}));
+app.use(express.static('./static'));
+app.use('./static', express.static('static'));
+app.use(express.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 
-app.get("/", (req, res) => {
-    res.end(index1);
-})
-app.post('/contactForm', (req, res) => {
-    // name1 = req.name;
-    // email = req.email;
-    // feed = req.feedBack;
-    let data =
+app.get('/', (req, res) => {
+  res.send(index);
+});
+
+const DB = process.env.DB_LOCAL;
+
+mongoose
+  .connect(
+    'mongodb+srv://prabhat10:prabhat2373@cluster0.2owkf.mongodb.net/userInfo',
     {
-        name: req.body.name,
-        email: req.body.email,
-        feed: req.body.feedBack
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
     }
-    // let outputtowrite = `name is ${name1}, email is ${email}, feed is ${feed}`
-    dataD = []
-    dataD.push(data);
-    let dataDa = JSON.stringify(dataD);
-    w.writeFile("data.json",dataDa)
-    // fs.writeFileSync("data.json",dataDa)
-    let para = { 'Message': 'Your feedback WasSent'}
-    
-    res.end(index, para);
-})
+  )
+  .then(() => {
+    // console.log(conn.connection);
+    console.log('DB connection SUCCESS!');
+  });
+
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  feedBack: String,
+});
+
+const users = mongoose.model('Users', userSchema);
+
+app.post('/contactForm', (req, res) => {
+  let myData = new users(req.body);
+  myData
+    .save()
+    .then(() => {
+      res.send('Thanks for showing Your interest');
+    })
+    .catch((err) => {
+      console.log('ERROR : ' + err.message);
+    });
+});
+
 app.listen(port, () => {
-    console.log(`The server is running on http://localhost:${port}`)
-})
+  console.log(`The server is running on http://localhost:${port}`);
+});
