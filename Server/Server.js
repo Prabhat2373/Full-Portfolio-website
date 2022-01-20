@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const body = require('body-parser');
+const dotenv = require('dotenv');
 const port = 8000;
 const fs = require('fs');
 const mongoose = require('mongoose');
@@ -18,11 +19,14 @@ app.get('/', (req, res) => {
   res.send(index);
 });
 
-const DB = process.env.DB_LOCAL;
+dotenv.config({ path: './config.env' });
+
+const DB = process.env.DATABASE;
 
 mongoose
   .connect(
     'mongodb+srv://prabhat10:prabhat2373@cluster0.2owkf.mongodb.net/userInfo',
+    // .connect(DB,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -32,7 +36,9 @@ mongoose
   .then(() => {
     // console.log(conn.connection);
     console.log('DB connection SUCCESS!');
-  });
+  }).catch((err)=>{
+    console.log("ERROR : " + err.message)
+  })
 
 const userSchema = new mongoose.Schema({
   name: String,
