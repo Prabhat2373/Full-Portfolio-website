@@ -23,6 +23,8 @@ $(document).scroll(function () {
     }
 });
 
+
+
 let inputs = document.querySelectorAll("input[type=range]");
 let meter = document.getElementsByClassName("meter");
 // console.log(meter)
@@ -68,3 +70,6 @@ npm.innerHTML = npmbar.value;
 jquery.innerHTML = jquerybar.value;
 wordpress.innerHTML = wordpressbar.value;
 bootstrap.innerHTML = bootstrapbar.value; 
+
+
+
