@@ -288,8 +288,8 @@ nav ul li a:hover::after {
 .firstSecOfAbout {
   background: url(./static/img/bg1.jpg) no-repeat center center/cover;
   width: 40vh;
-  /* height: 60vh; */
-  max-height: 77vh;
+  /* height: 60vh; */ 
+  max-height: 80vh;
 }
 .AboutContainer {
   border: 2px solid white;
