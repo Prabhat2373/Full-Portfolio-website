@@ -25,7 +25,7 @@
   background: white;
   position: sticky;
   top: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo {
   text-decoration: none;
@@ -47,43 +47,43 @@ nav ul li a {
   text-decoration: none;
   color: var(--head-color);
   color: #000f52;
+  position: relative;
   /* padding: 6px; */
 }
-.hireSect a
-{
+.hireSect a {
   text-decoration: none;
 }
-/* nav ul li a:hover
-{
-    text-decoration: underline;
-} */
-/* nav ul li a:hover,   */
-/* nav ul li a::after { */
 nav ul li a::after {
-  content: "";
-  background-color: #4c67e4;
+  content: '';
+  position: absolute;
+  height: 2.5px;
+  bottom: -1px;
+  left: 0;
+  right: 0;
   background-color: #000f52;
-  height: 3px;
-  /* position: relative; */
-  width: 100%;
-  display: block;
   visibility: hidden;
-  /* transition: 0.3s; */
-}
-nav ul li a:hover::after {
-  visibility: visible;
-  /* display: block; */
-  animation: trans 0.3s 1;
-}
-@keyframes trans {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+nav ul li.active a::after {
+  visibility: visible;
+  /* display: block; */
+  transform: scaleX(1);
+}
+nav ul li a:hover:after {
+  visibility: visible;
+  /* display: block; */
+  transform: scaleX(1);
+}
 .btn {
   /* background-color: #4b3d8f; */
   background-color: #ffffff;
@@ -121,7 +121,7 @@ nav ul li a:hover::after {
   left: 0;
   right: 0;
   bottom: 0;
-  content: "";
+  content: '';
   opacity: 0.1;
   width: 47%;
   height: 99%;
@@ -133,11 +133,10 @@ nav ul li a:hover::after {
   justify-content: center;
   align-items: center;
   height: 34vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.bottom
-{
+.bottom {
   position: fixed;
   box-shadow: 0 0 10px 12px rgba(0, 0, 0, 0.288);
   bottom: -10px;
@@ -233,7 +232,7 @@ nav ul li a:hover::after {
   position: relative;
 }
 .dynamic-texts li span::after {
-  content: "";
+  content: '';
   position: absolute;
   height: 100%;
   width: 100%;
@@ -241,14 +240,13 @@ nav ul li a:hover::after {
   left: 0;
   border-left: 2px solid rgb(255, 66, 66);
   transition: ease-in;
-  animation: typing 3s steps(12) infinite,cursor-blink 0.75s step-end infinite;
+  animation: typing 3s steps(12) infinite, cursor-blink 0.75s step-end infinite;
 }
 @keyframes typing {
   100% {
     left: 100%;
     margin: 0 -35px 0 35px;
   }
-  
 }
 @keyframes cursor-blink {
   from,
@@ -288,7 +286,7 @@ nav ul li a:hover::after {
 .firstSecOfAbout {
   background: url(./static/img/bg1.jpg) no-repeat center center/cover;
   width: 40vh;
-  /* height: 60vh; */ 
+  /* height: 60vh; */
   max-height: 80vh;
 }
 .AboutContainer {
@@ -312,7 +310,7 @@ nav ul li a:hover::after {
   align-content: center;
 }
 .info {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: wheat;
   padding: 10px 5px;
 }
@@ -359,8 +357,7 @@ nav ul li a:hover::after {
   border-bottom: 1px solid #ffffffb8;
   padding: 6px;
 }
-.skillstxt
-{
+.skillstxt {
   color: wheat;
 }
 .skillcont {
@@ -368,7 +365,7 @@ nav ul li a:hover::after {
   justify-content: center;
   align-items: center;
   color: #f5deb3;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.5rem;
   margin: 20px 0 10px 2px;
   /* border-bottom: 2px solid; */
@@ -390,7 +387,7 @@ nav ul li a:hover::after {
   border-bottom: 2px solid;
   margin: 14px 130px;
   font-size: 1.6rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-shadow: 0 0 4px;
 }
 .SkillBoxes {
@@ -417,8 +414,8 @@ nav ul li a:hover::after {
   align-items: center;
   font-size: 1.3rem;
   margin-bottom: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .circle-wrap {
@@ -531,7 +528,7 @@ nav ul li a:hover::after {
   border-bottom: 2px solid;
   margin: 14px 130px;
   font-size: 1.2rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-shadow: 0 0 4px;
 }
 .skillRangeBar {
@@ -553,7 +550,7 @@ nav ul li a:hover::after {
 .barsHead {
   color: rgb(233 225 225 / 90%);
   font-size: 1.6rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }
@@ -569,8 +566,8 @@ nav ul li a:hover::after {
 .meter {
   display: inline;
   float: right;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
 }
 .skillbar1 {
@@ -582,17 +579,17 @@ nav ul li a:hover::after {
   color: #ffffffc7;
   font-size: 1rem;
 }
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
 }
-input[type="range"]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   /* width: 00px; */
   height: 5px;
   background: #006dac;
   border: none;
   /* border-radius: 12px; */
 }
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 16px;
@@ -602,7 +599,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -4px;
 }
 
-input[type="range"]:focus::-webkit-slider-runnable-track {
+input[type='range']:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
 
@@ -632,7 +629,7 @@ h4 {
 #projectH1 {
   color: wheat;
   font-size: 2.3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
   margin-top: 23px;
   margin-bottom: 3px;
@@ -689,7 +686,7 @@ h4 {
 .projectData {
   padding: 12px;
   /* backdrop-filter: blur(5px); */
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .proTit {
   color: rgba(255, 255, 255, 0.884);
@@ -705,15 +702,14 @@ h4 {
 .projectBoxes a {
   text-decoration: none;
 }
-div[data-scroll="in"] {
+div[data-scroll='in'] {
   opacity: 1;
   transition: 1.5s;
 }
-div[data-scroll="out"] {
+div[data-scroll='out'] {
   opacity: 0;
   transition: 1.5s;
 }
-
 
 /* code for contact section  */
 #contactSect {
@@ -736,7 +732,7 @@ div[data-scroll="out"] {
 }
 .contHead {
   font-size: 1.4rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #contactH1 {
   display: flex;
@@ -786,8 +782,8 @@ div[data-scroll="out"] {
   backdrop-filter: blur(5px);
   color: wheat;
   font-size: 1.2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .inptxt:focus {
   box-shadow: 0 0 10px 2px;
@@ -803,8 +799,8 @@ div[data-scroll="out"] {
   backdrop-filter: blur(5px);
   color: rgba(255, 255, 255, 0.753);
   font-size: 1.2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -819,7 +815,7 @@ div[data-scroll="out"] {
   height: 100%;
   background: #191a1b;
   color: #ffffffcc;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding-top: 27px;
 }
 .footInside {
@@ -884,6 +880,7 @@ div[data-scroll="out"] {
 }
 #footul li a:hover {
   color: #ffffff;
+  text-decoration: underline;
 }
 .footCont3 {
   display: flex;
@@ -913,8 +910,8 @@ div[data-scroll="out"] {
 }
 .footerContainer footer {
   font-size: 1.1rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* section for media queries */
@@ -985,50 +982,41 @@ div[data-scroll="out"] {
     font-size: 14px;
   }
 }
-@media screen and (max-width:580px) {
-  .firstSecOfAbout
-  {
+@media screen and (max-width: 580px) {
+  .firstSecOfAbout {
     display: none;
   }
 }
-@media screen and (max-height:726px) {
-  .AboutContainer
-  {
-      height: 64vh;
+@media screen and (max-height: 726px) {
+  .AboutContainer {
+    height: 64vh;
   }
 }
-@media screen and (max-height:690px) {
-  .AboutContainer
-  {
-      height: 67vh;
+@media screen and (max-height: 690px) {
+  .AboutContainer {
+    height: 67vh;
   }
 }
-@media screen and (max-height:690px) {
-  .AboutContainer
-  {
-      height: 70vh;
+@media screen and (max-height: 690px) {
+  .AboutContainer {
+    height: 70vh;
   }
 }
-@media screen and (max-height:638px) {
-  .AboutContainer
-  {
-      height: 74vh;
+@media screen and (max-height: 638px) {
+  .AboutContainer {
+    height: 74vh;
   }
 }
-@media screen and (max-height:600px) {
-  .AboutContainer
-  {
-      height: 78vh;
+@media screen and (max-height: 600px) {
+  .AboutContainer {
+    height: 78vh;
   }
-  
 }
-@media screen and (max-width:680px) {
-  .projectBoxes
-  {
+@media screen and (max-width: 680px) {
+  .projectBoxes {
     width: 80vw;
   }
-  .projectBoxes img
-  {
+  .projectBoxes img {
     width: 80vw;
   }
 }
@@ -1146,7 +1134,7 @@ div[data-scroll="out"] {
   }
   /* #line::before */
   .burger::before {
-    content: "";
+    content: '';
     height: 2px;
     width: 20px;
     transform: translateY(-8px);
@@ -1174,7 +1162,7 @@ div[data-scroll="out"] {
   }
   /* #line::after */
   .burger::after {
-    content: "";
+    content: '';
     height: 2px;
     width: 20px;
     transform: translateY(8px);

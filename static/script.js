@@ -24,7 +24,6 @@ $(document).scroll(function () {
 });
 
 
-
 let inputs = document.querySelectorAll("input[type=range]");
 let meter = document.getElementsByClassName("meter");
 // console.log(meter)

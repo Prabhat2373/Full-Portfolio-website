@@ -53,35 +53,36 @@ nav ul li a {
 {
   text-decoration: none;
 }
-/* nav ul li a:hover
-{
-    text-decoration: underline;
-} */
-/* nav ul li a:hover,   */
-/* nav ul li a::after { */
 nav ul li a::after {
-  content: "";
-  background-color: #4c67e4;
+  content: '';
+  position: absolute;
+  height: 2.5px;
+  bottom: -1px;
+  left: 0;
+  right: 0;
   background-color: #000f52;
-  height: 3px;
-  /* position: relative; */
-  width: 100%;
-  display: block;
   visibility: hidden;
-  /* transition: 0.3s; */
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-nav ul li a:hover::after {
+
+nav ul li.active a::after {
   visibility: visible;
   /* display: block; */
-  animation: trans 0.3s 1;
+  transform: scaleX(1);
 }
-@keyframes trans {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+nav ul li a:hover:after {
+  visibility: visible;
+  /* display: block; */
+  transform: scaleX(1);
 }
 
 .btn {
@@ -884,6 +885,7 @@ div[data-scroll="out"] {
 }
 #footul li a:hover {
   color: #ffffff;
+  text-decoration: underline;
 }
 .footCont3 {
   display: flex;
