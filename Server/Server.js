@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema({
     type:String,
     required:true,
   },
-  feedback: {
+  feedBack: {
     type:String,
     required:true,
   },
