@@ -10,6 +10,8 @@ const mongoose = require('mongoose');
 let index = fs.readFileSync('static/index.html');
 let style = fs.readFileSync('static/css/style.css');
 
+// const index = fs.readFileSync("/index.html","utf-8")
+
 app.use(express.static('./static'));
 app.use('./static', express.static('static'));
 app.use(express.urlencoded({ extended: true }));
@@ -24,9 +26,9 @@ dotenv.config({ path: './config.env' });
 const DB = process.env.DATABASE;
 
 mongoose
-  .connect(
-    'mongodb+srv://prabhat10:prabhat2373@cluster0.2owkf.mongodb.net/userInfo',
-    // .connect(DB,
+  // .connect(
+    // 'mongodb+srv://prabhat10:prabhat2373@cluster0.2owkf.mongodb.net/userInfo',
+    .connect(DB,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -41,23 +43,38 @@ mongoose
   })
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  feedBack: String,
+  name: {
+    type:String,
+    required:true,
+  },
+  email: {
+    type:String,
+    required:true,
+  },
+  feedback: {
+    type:String,
+    required:true,
+  },
 });
 
 const users = mongoose.model('Users', userSchema);
 
-app.post('/contactForm', (req, res) => {
-  let myData = new users(req.body);
-  myData
-    .save()
-    .then(() => {
-      res.send('Thanks for showing Your interest');
+app.post('/contactForm', async (req, res) => {
+  try
+  {
+    const myData = new users(req.body);
+    myData.save().then(()=>{
+      res.status(200).send('<h1>Thanks For Your Interest</h1>')
+    }).catch(err=>{
+      console.log(err)
     })
-    .catch((err) => {
-      console.log('ERROR : ' + err.message);
-    });
+  }
+  catch(err){
+    res.status(404).json({
+      status:"Bad Request",
+      message:err.message
+    })
+  }
 });
 
 app.listen(port, () => {

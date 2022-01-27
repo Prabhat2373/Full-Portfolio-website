@@ -38,6 +38,35 @@ $(document).scroll(function () {
 //   scrollFunction();
 // };
 
+let ageinp = document.getElementById("ageans");
+let date = new Date();
+
+function YourAge(birthYear,birthMon){
+  let curMon = date.getMonth()+1
+  let curYear = date.getFullYear();
+  
+  const currentAge = curYear-1 - birthYear;
+  return currentAge;
+}
+console.log(YourAge(2004))
+ageinp.innerHTML = `${YourAge(2004)} Years Old`
+
+const li = document.querySelectorAll(".links");
+const sect = document.querySelectorAll("section");
+
+function activeMenu(){
+  let len = sect.length;
+  // console.log(--len)
+  while(--len && window.scrollY + 97 < sect[len].offsetTop){}
+  li.forEach(el => el.classList.remove('active'));
+  li[len].classList.add('active');
+}
+
+activeMenu();
+window.addEventListener("scroll",activeMenu);
+
+// console.log(li)
+
 let inputs = document.querySelectorAll('input[type=range]');
 let meter = document.getElementsByClassName('meter');
 // console.log(meter)

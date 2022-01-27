@@ -287,7 +287,7 @@ nav ul li a:hover:after {
   background: url(./static/img/bg1.jpg) no-repeat center center/cover;
   width: 40vh;
   /* height: 60vh; */
-  max-height: 80vh;
+  max-height: 95vh;
 }
 .AboutContainer {
   border: 2px solid white;
@@ -972,10 +972,10 @@ div[data-scroll='out'] {
     height: 81vh;
   }
   .firstSecOfAbout {
-    height: 85vh;
+    height: 95vh;
   }
   #sectAbout {
-    height: 100vh;
+    height: 100%;
   }
   .info {
     padding: 5px 5px;
@@ -989,27 +989,33 @@ div[data-scroll='out'] {
 }
 @media screen and (max-height: 726px) {
   .AboutContainer {
-    height: 64vh;
+    height: 73vh;
+  }
+}
+@media screen and (max-height: 786px) {
+  .AboutContainer {
+    height: 73vh;
+  }
+}
+
+@media screen and (max-height: 690px) {
+  .AboutContainer {
+    height: 75vh;
   }
 }
 @media screen and (max-height: 690px) {
   .AboutContainer {
-    height: 67vh;
-  }
-}
-@media screen and (max-height: 690px) {
-  .AboutContainer {
-    height: 70vh;
+    height: 80vh;
   }
 }
 @media screen and (max-height: 638px) {
   .AboutContainer {
-    height: 74vh;
+    height: 84vh;
   }
 }
 @media screen and (max-height: 600px) {
   .AboutContainer {
-    height: 78vh;
+    height: 93vh;
   }
 }
 @media screen and (max-width: 680px) {
@@ -1022,7 +1028,7 @@ div[data-scroll='out'] {
 }
 @media screen and (max-height: 380px) {
   .AboutContainer {
-    height: 75vh;
+    height: 80vh;
     padding: 2px 40px 9px 14px;
   }
   #sectAbout {
