@@ -48,7 +48,7 @@ function YourAge(birthYear,birthMon){
   const currentAge = curYear-1 - birthYear;
   return currentAge;
 }
-console.log(YourAge(2004))
+// console.log(YourAge(2004))
 ageinp.innerHTML = `${YourAge(2004)} Years Old`
 
 const li = document.querySelectorAll(".links");
