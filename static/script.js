@@ -56,7 +56,7 @@ const sect = document.querySelectorAll("section");
 
 function activeMenu(){
   let len = sect.length;
-  // console.log(--len)
+  // console.log(--len )
   while(--len && window.scrollY + 97 < sect[len].offsetTop){}
   li.forEach(el => el.classList.remove('active'));
   li[len].classList.add('active');

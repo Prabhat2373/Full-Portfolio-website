@@ -2,13 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const body = require('body-parser');
-const dotenv = require('dotenv');
 const port = 8000;
 const fs = require('fs');
-const mongoose = require('mongoose');
+
+const usersModel = require("./../model/userModel")
 
 let index = fs.readFileSync('static/index.html');
 let style = fs.readFileSync('static/css/style.css');
+const redirect = fs.readFileSync("static/redirect.html","utf-8")
 
 // const index = fs.readFileSync("/index.html","utf-8")
 
@@ -21,59 +22,17 @@ app.get('/', (req, res) => {
   res.send(index);
 });
 
-dotenv.config({ path: './config.env' });
-
-const DB = process.env.DATABASE;
-
-mongoose
-  // .connect(
-    // 'mongodb+srv://prabhat10:prabhat2373@cluster0.2owkf.mongodb.net/userInfo',
-    .connect(DB,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-    }
-  )
-  .then(() => {
-    // console.log(conn.connection);
-    console.log('DB connection SUCCESS!');
-  }).catch((err)=>{
-    console.log("ERROR : " + err.message)
-  })
-
-const userSchema = new mongoose.Schema({
-  name: {
-    type:String,
-    required:true,
-  },
-  email: {
-    type:String,
-    required:true,
-  },
-  feedBack: {
-    type:String,
-    required:true,
-  },
-});
-
-const users = mongoose.model('Users', userSchema);
-
 app.post('/contactForm', async (req, res) => {
-  try
-  {
-    const myData = new users(req.body);
-    myData.save().then(()=>{
-      res.status(200).send('<h1>Thanks For Your Interest</h1>')
-    }).catch(err=>{
-      console.log(err)
+  try {
+    const newUser = await usersModel.create(req.body);
+    newUser.save().then(()=>{
+      res.send(redirect)
     })
-  }
-  catch(err){
+  } catch (err) {
     res.status(404).json({
-      status:"Bad Request",
-      message:err.message
-    })
+      status: 'Bad Request',
+      message: err.message,
+    });
   }
 });
 
