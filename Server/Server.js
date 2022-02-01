@@ -7,8 +7,8 @@ const fs = require('fs');
 
 const usersModel = require("./../model/userModel")
 
-let index = fs.readFileSync('static/index.html');
-let style = fs.readFileSync('static/css/style.css');
+let index = fs.readFileSync('static/index.html', 'utf-8');
+let style = fs.readFileSync('static/css/style.css', 'utf-8');
 const redirect = fs.readFileSync("static/redirect.html","utf-8")
 
 // const index = fs.readFileSync("/index.html","utf-8")
