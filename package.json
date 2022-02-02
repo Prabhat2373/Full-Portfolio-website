@@ -13,16 +13,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon ./Server/Server.js"
+    "start": "node ./Server/Server.js",
+    "dev":"nodemon ./Server/Server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Prabhat2373/Full-Portfolio-website.git"
+    "url": "git+https://github.com/Prabhat2373/dev.Prabhat.git"
   },
   "author": "prabhat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Prabhat2373/Full-Portfolio-website/issues"
+    "url": "https://github.com/Prabhat2373/dev.Prabhat/issues"
   },
-  "homepage": "https://github.com/Prabhat2373/Full-Portfolio-website#readme"
+  "homepage": "https://github.com/Prabhat2373/dev.Prabhat#readme"
 }
