@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const body = require('body-parser');
-const port = 8000;
+const port = process.env.PORT || 5000;
 const fs = require('fs');
 
-const usersModel = require('./../model/userModel');
+const usersModel = require('./model/userModel');
 
 const home = fs.readFileSync('index.html', 'utf-8');
 let index = fs.readFileSync('static/index.html', 'utf-8');

@@ -13,8 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./Server/Server.js",
-    "dev":"nodemon ./Server/Server.js"
+    "start": "node Server.js",
+    "dev":"nodemon Server.js"
   },
   "repository": {
     "type": "git",
