@@ -6,8 +6,6 @@ dotenv.config({ path: './config.env' });
 const DB = process.env.DATABASE;
 
 mongoose
-  // .connect(
-  // 'mongodb+srv://prabhat10:prabhat2373@cluster0.2owkf.mongodb.net/userInfo',
   .connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

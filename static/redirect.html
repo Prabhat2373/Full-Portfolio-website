@@ -15,6 +15,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
+        }
+        .request-message
+        {
+            padding: 28px;
+            margin: 23px;
+
         }
         .msg
         {
@@ -40,11 +47,26 @@
         {
             background-color: #8e81ef4d;
         }
+        .gif
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .gif img
+        {
+            width: 250px;
+            height: 250px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="request-message">
+           <div class="gif">
+            <img src="./img/cute-bear.gif" alt="">
+           </div>
             <h1 class="msg">Thanks For Showing Interest I'll be get in touch with you SOON</h1>
             <div class="button-cont">
                 <a href="./../index.html"> <button class="returnBtn" id="returnBtn">Return</button> </a>
