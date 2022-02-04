@@ -1,5 +1,7 @@
 console.log("Welcome to Prabhat's Personal Website");
 
+
+
 $(document).ready(function () {
   $('.burger').click(() => {
     $('.navMenu').toggleClass('show');
