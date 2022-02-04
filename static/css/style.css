@@ -14,19 +14,29 @@
 {
   background: url(/bg.jpg)no-repeat center center/cover; 
 } */
+header
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1.3rem 3.5rem;
+  bottom: 20px;
   /* border: 2px solid black; */
+  border-radius: 20px;
   box-shadow: 0 3px 10px 10px rgb(19, 18, 18);
-  z-index: 2;
-  background: white;
-  position: sticky;
-  top: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.377); 
+  backdrop-filter: blur(5px);
+  position: fixed;
+  /* top: 0; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .logo {
   text-decoration: none;
   font-size: 1.3rem;
@@ -111,7 +121,7 @@ nav ul li a:hover:after {
 }
 #sectHome {
   width: 100%;
-  height: 88vh;
+  height: 100vh;
   background-color: #ffffff;
   background-color: #191a1b;
 }
@@ -124,7 +134,7 @@ nav ul li a:hover:after {
   content: '';
   opacity: 0.1;
   width: 47%;
-  height: 99%;
+  height: 100vh;
   background: #3e64ff;
   z-index: 1;
 }
@@ -148,15 +158,16 @@ nav ul li a:hover:after {
   justify-content: flex-end;
 }
 .logoCont {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  bottom: 60px;
-  right: 60px;
-  z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 30%;
+    left: 10px;
+    z-index: 1;
+    position: fixed;
 }
 .logos {
-  width: 43px;
+  width: 25px;
   padding: 6px;
   margin: 3px;
   transition: 0.3s;
@@ -920,6 +931,10 @@ div[data-scroll='out'] {
   .firstSecOfAbout {
     display: none;
   }
+  .overlay
+  {
+    height: 100vh;
+  }
 }
 @media screen and (max-width: 700px) {
   .footInside {
@@ -949,10 +964,14 @@ div[data-scroll='out'] {
   .social-logos-foot {
     margin-right: 25%;
   }
+  .overlay
+  {
+    height: 100vh; 
+  }
 }
 @media screen and (min-height: 1280px) {
   .overlay {
-    height: 95%;
+    height: 100vh;
   }
   #sectAbout {
     height: 62vh;
@@ -1025,6 +1044,7 @@ div[data-scroll='out'] {
   .projectBoxes img {
     width: 80vw;
   }
+  
 }
 @media screen and (max-height: 380px) {
   .AboutContainer {
@@ -1087,37 +1107,42 @@ div[data-scroll='out'] {
     width: 88%;
   }
 }
+@media screen and (max-width:500px) {
+  .navbar
+  {
+    width: 40%;
+    padding: 1.3rem 4.5rem;
+  }
+
+}
 @media screen and (max-width: 888px) {
   body {
     background-color: #ffffff;
   }
+  .overlay
+  {
+    height: 100vh;
+  }
   #sectHome {
-    height: 93vh;
+    height: 100vh;
   }
   .navbar {
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    padding: 15px;
-    display: flex;
+    /* width: 70%; */
+    flex-wrap: wrap;
   }
   .navSect {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
   }
-  .navMenu {
+  /* .navMenu {
     position: fixed;
     top: 54px;
     right: -100%;
-    /* left: -100%; */
     width: 34%;
     height: 100%;
     padding: 2rem;
     background-color: #cad4ffb0;
     transition: 0.5s;
-  }
+  } */
   .show {
     /* left: 0; */
     right: 0;
@@ -1135,9 +1160,9 @@ div[data-scroll='out'] {
     display: flex;
     justify-content: center;
   }
-  nav ul {
+  /* nav ul {
     display: none;
-  }
+  } */
   /* #line::before */
   .burger::before {
     content: '';
