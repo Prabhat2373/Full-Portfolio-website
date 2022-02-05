@@ -9,16 +9,16 @@
   --secondary-color: #ffffffb2;
   --trinary-color: #e69a8dff;
   --head-color: #540dff;
+  --teal-color: hsl(174, 63%, 62%);
 }
 /* body
 {
   background: url(/bg.jpg)no-repeat center center/cover; 
 } */
-header
-{
- display: flex;
- align-items: center;
- justify-content: center;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbar {
   display: flex;
@@ -30,18 +30,29 @@ header
   border-radius: 20px;
   box-shadow: 0 3px 10px 10px rgb(19, 18, 18);
   z-index: 99;
-  background: rgba(255, 255, 255, 0.377); 
+  background: rgba(255, 255, 255, 0.377);
   backdrop-filter: blur(5px);
   position: fixed;
   /* top: 0; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+  margin: 0px 20px;
+  z-index: 3;
+  cursor: pointer;
+}
+.icon-toggle {
+  filter: invert(1);
+}
 .logo {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: bolder;
-  color: var(--head-color);
+  color: rgb(157, 126, 243);
+  z-index: 1;
 }
 nav ul {
   display: flex;
@@ -62,6 +73,15 @@ nav ul li a {
 }
 .hireSect a {
   text-decoration: none;
+}
+.hireSect {
+  display: flex;
+  gap: 2rem;
+  padding: 5px;
+  margin: 4px;
+  z-index: 3;
+  position: absolute;
+  bottom: 125px;
 }
 nav ul li a::after {
   content: '';
@@ -96,25 +116,44 @@ nav ul li a:hover:after {
 }
 .btn {
   /* background-color: #4b3d8f; */
-  background-color: #ffffff;
+  background-color: #9184d4;
+  /* background-color: #ffffff; */
   padding: 9px;
-  color: #540dff;
+  color: #9184d4;
   font-size: 16px;
   outline: none;
-  border: 2px solid #540dff;
+  border: 2px solid #9184d4;
   font-weight: 900;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(to top left, #4c00ff42, rgba(119, 0, 255, 0.247))
-    bottom left;
+  /* background: linear-gradient(to top left, #4c00ff42, rgba(119, 0, 255, 0.247)) bottom left; */
+  /* background: none; */
+  transition: 0.2s ease;
+  /* background: hsl(250, 66%, 75%); */
   background: none;
-  transition: 0.3s ease-in-out;
+}
+.btn1 {
+  /* background-color: #4b3d8f; */
+  background-color: #9184d4;
+  /* background-color: #ffffff; */
+  padding: 9px;
+  color: black;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid #9184d4;
+  font-weight: 900;
+  border-radius: 10px;
+  cursor: pointer;
+  /* background: linear-gradient(to top left, #4c00ff42, rgba(119, 0, 255, 0.247)) bottom left; */
+  /* background: none; */
+  transition: 0.2s ease;
+  background: #9184d4;
 }
 .btn:hover {
-  /* background-color: #000f52; */
-  background: linear-gradient(to top left, #540dff, rgb(111, 0, 255)) bottom
-    left;
-  color: azure;
+  background-color: #9184d4;
+  /* background: linear-gradient(to top left, #540dff, rgb(111, 0, 255)) bottom
+    left; */
+  color: rgb(0, 0, 0);
 }
 .burger {
   display: none;
@@ -123,7 +162,8 @@ nav ul li a:hover:after {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
-  background-color: #191a1b;
+  /* background-color: #0b111e; */
+  background-color: #0b111e;
 }
 .overlay {
   position: absolute;
@@ -133,7 +173,7 @@ nav ul li a:hover:after {
   bottom: 0;
   content: '';
   opacity: 0.1;
-  width: 47%;
+  width: 49%;
   height: 100vh;
   background: #3e64ff;
   z-index: 1;
@@ -145,6 +185,7 @@ nav ul li a:hover:after {
   height: 34vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  flex-direction: column;
 }
 .bottom {
   position: fixed;
@@ -158,13 +199,13 @@ nav ul li a:hover:after {
   justify-content: flex-end;
 }
 .logoCont {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 30%;
-    left: 10px;
-    z-index: 1;
-    position: fixed;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 30%;
+  left: 10px;
+  z-index: 1;
+  position: fixed;
 }
 .logos {
   width: 25px;
@@ -177,10 +218,15 @@ nav ul li a:hover:after {
   transform: translateY(-7px) scale(1.3);
 }
 #heroHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
   font-size: 1.6rem;
   color: rgb(162 163 255);
   /* color: wheat; */
-  margin-top: 220px;
+  margin-top: 100px;
 }
 #and {
   color: rgb(162 163 255);
@@ -194,7 +240,7 @@ nav ul li a:hover:after {
 #txt2 {
   color: var(--secondary-color);
   color: #ff4242;
-  font-size: 80px;
+  font-size: 3.3rem;
   display: block;
 }
 #webtxt {
@@ -211,6 +257,8 @@ nav ul li a:hover:after {
 #wrapcont {
   display: inline-flex;
   flex-direction: column;
+  justify-content: center;
+  font-size: 1.6rem;
 }
 .static-text {
   font-size: 50px;
@@ -218,17 +266,17 @@ nav ul li a:hover:after {
 }
 .dynamic-texts {
   /* margin-left: 15px; */
-  height: 65px;
-  line-height: 65px;
+  height: 56px;
+  line-height: 59px;
   /* background: brown; */
   overflow: hidden;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .dynamic-texts li {
   color: rgb(255, 66, 66);
   list-style: none;
   font-weight: 500;
-  font-size: 60px;
+  font-size: 50px;
   position: relative;
   top: 0;
   transition: ease-in-out;
@@ -247,7 +295,7 @@ nav ul li a:hover:after {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #191a1b;
+  background: #0b111e;
   left: 0;
   border-left: 2px solid rgb(255, 66, 66);
   transition: ease-in;
@@ -275,7 +323,7 @@ nav ul li a:hover:after {
   height: 100%;
   display: flex;
   /* background: url(/bg3.jpg) no-repeat center center/cover; */
-  background: #191a1b;
+  background: #0b111e;
   /* align-items: center; */
   border-top: 2px solid #ffffff;
   justify-content: center;
@@ -355,7 +403,7 @@ nav ul li a:hover:after {
 
 #skillSect {
   height: 100%;
-  background: #191a1b;
+  background: #0b111e;
   border-top: 2px solid #fff;
 }
 .AboutPara {
@@ -520,7 +568,7 @@ nav ul li a:hover:after {
   width: 122px;
   height: 122px;
   border-radius: 50%;
-  background: #191a1b;
+  background: #0b111e;
   line-height: 120px;
   text-align: center;
   margin-top: 14px;
@@ -634,7 +682,7 @@ h4 {
 #ProjectSect {
   height: 100%;
   /* height: 100vh; */
-  background: #191a1b;
+  background: #0b111e;
   border-top: 2px solid #fff;
 }
 #projectH1 {
@@ -713,21 +761,21 @@ h4 {
 .projectBoxes a {
   text-decoration: none;
 }
-div[data-scroll='in'] {
+/* div[data-scroll='in'] {
   opacity: 1;
   transition: 1.5s;
 }
 div[data-scroll='out'] {
   opacity: 0;
   transition: 1.5s;
-}
+} */
 
 /* code for contact section  */
 #contactSect {
   display: flex;
   height: 100%;
   border-top: 2px solid white;
-  background: #191a1b;
+  background: #0b111e;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
@@ -784,11 +832,11 @@ div[data-scroll='out'] {
   outline: none;
 }
 .inptxt {
-  padding: 10px 42px;
+  padding: 3% 8%;
   margin: 6px;
   outline: none;
   border-radius: 16px;
-  border: 2px solid #191a1b;
+  border: 2px solid #0b111e;
   background: none;
   backdrop-filter: blur(5px);
   color: wheat;
@@ -805,7 +853,7 @@ div[data-scroll='out'] {
   margin: 6px;
   outline: none;
   border-radius: 16px;
-  border: 2px solid #191a1b;
+  border: 2px solid #0b111e;
   background: none;
   backdrop-filter: blur(5px);
   color: rgba(255, 255, 255, 0.753);
@@ -824,7 +872,7 @@ div[data-scroll='out'] {
 /* code for footer section  */
 .footSect {
   height: 100%;
-  background: #191a1b;
+  background: #0b111e;
   color: #ffffffcc;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding-top: 27px;
@@ -931,8 +979,7 @@ div[data-scroll='out'] {
   .firstSecOfAbout {
     display: none;
   }
-  .overlay
-  {
+  .overlay {
     height: 100vh;
   }
 }
@@ -964,9 +1011,8 @@ div[data-scroll='out'] {
   .social-logos-foot {
     margin-right: 25%;
   }
-  .overlay
-  {
-    height: 100vh; 
+  .overlay {
+    height: 100vh;
   }
 }
 @media screen and (min-height: 1280px) {
@@ -1044,7 +1090,6 @@ div[data-scroll='out'] {
   .projectBoxes img {
     width: 80vw;
   }
-  
 }
 @media screen and (max-height: 380px) {
   .AboutContainer {
@@ -1093,9 +1138,8 @@ div[data-scroll='out'] {
 }
 @media screen and (max-width: 800px) {
   .inptxt {
-    width: 40%;
-    /* padding: 10px 28%; */
-    padding: 11px 50% 10px 11px;
+    width: 75%;
+    padding: 12px 12% 10px 11px;
   }
   #submit {
     width: 45%;
@@ -1107,20 +1151,17 @@ div[data-scroll='out'] {
     width: 88%;
   }
 }
-@media screen and (max-width:500px) {
-  .navbar
-  {
+@media screen and (max-width: 500px) {
+  .navbar {
     width: 40%;
     padding: 1.3rem 4.5rem;
   }
-
 }
 @media screen and (max-width: 888px) {
   body {
     background-color: #ffffff;
   }
-  .overlay
-  {
+  .overlay {
     height: 100vh;
   }
   #sectHome {
@@ -1153,9 +1194,9 @@ div[data-scroll='out'] {
     justify-content: center;
   }
 
-  .hireSect {
+  /* .hireSect {
     display: none;
-  }
+  } */
   .logoSect {
     display: flex;
     justify-content: center;

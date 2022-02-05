@@ -25,11 +25,21 @@
         </div> -->
             <div class="navMenu" id="navmen">
                 <ul class="navSect">
-                    <li class="links active"><a href="#sectHome"><box-icon name='home-circle' ></box-icon></a></li>
-                    <li class="links"><a href="#sectAbout"><box-icon name='user' ></box-icon></a></li>
-                    <li class="links"><a href="#skillSect"><box-icon name='pie-chart-alt-2' ></box-icon></a></li>
-                    <li class="links"><a href="#ProjectSect"><box-icon type='solid' name='component'></box-icon></a></li>
-                    <li class="links"><a href="#contactSect"><box-icon name='chat'></box-icon></a></li>
+                    <li class="links active"><a href="#sectHome">
+                            <box-icon name='home-circle'></box-icon>
+                        </a></li>
+                    <li class="links"><a href="#sectAbout">
+                            <box-icon name='user'></box-icon>
+                        </a></li>
+                    <li class="links"><a href="#skillSect">
+                            <box-icon name='pie-chart-alt-2'></box-icon>
+                        </a></li>
+                    <li class="links"><a href="#ProjectSect">
+                            <box-icon type='solid' name='component'></box-icon>
+                        </a></li>
+                    <li class="links"><a href="#contactSect">
+                            <box-icon name='chat'></box-icon>
+                        </a></li>
                 </ul>
             </div>
             <!-- <div class="hireSect">
@@ -42,7 +52,18 @@
     </header>
     <section id="sectHome">
         <div class="overlay"></div>
+        <div class="top-bar">
+            <div class="navLogo">
+                <a href="#" class="logo">PRABHAT</a>
+            </div>
+            <div class="dark-light-toggle">
+                <!-- <img src="#" alt="" class="toggler" id="dark-light-toggler">     -->
+                <!-- <box-icon type='solid' name='sun'></box-icon> -->
+                <box-icon name='moon' class="icon-toggle"></box-icon>
+            </div>
+        </div>
         <div class="container">
+            
             <h1 id="heroHead">Hello World <span id="txt1">I'm,</span>
                 <span id="txt2">Prabhat</span>
                 <strong id="webtxt"><span id="and">And</span> I'm,</strong>
@@ -54,6 +75,10 @@
                     </ul>
                 </div>
             </h1>
+             <div class="hireSect">
+            <a href="#contactSect"> <button class="btn1" id="btn">Hire Me!</button></a>
+            <a href="./../prabhat-resume.pdf" download target="_blank"> <button class="btn" id="btn1">Download CV</button></a>
+        </div>
         </div>
         <div class="social-logos">
             <div class="logoCont">
@@ -73,7 +98,7 @@
             <div class="firstSecOfAbout">
                 <!-- about -->
             </div>
-            <div class="AboutContainer" data-aos="fade-left" data-aos-duration="600">
+            <div class="AboutContainer" >
                 <h1 id="headAbout">About Me</h1>
                 <div class="paraCont">
                     <p class="AboutPara">
@@ -117,7 +142,7 @@
             <h3>- key Skills</h3>
         </div>
         <div class="SkillBoxes">
-            <div class="boxes" data-aos="fade-right">
+            <div class="boxes" >
                 <div class="boxHead">
                     HTML
                 </div>
@@ -133,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="boxes" data-aos="fade-up">
+            <div class="boxes">
                 <div class="boxHead">
                     CSS
                 </div>
@@ -149,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="boxes" data-aos="fade-left">
+            <div class="boxes" >
                 <div class="boxHead">
                     javaScript
                 </div>
@@ -177,28 +202,28 @@
 
                 <div class="optskillbars">
                     <h1 class="barsHead">backend and database</h1>
-                    <div class="skillbar" data-aos="fade-right">
+                    <div class="skillbar">
                         <div class="h1img">
                             <img src="/img/node.png" alt="" class="rangeImg">
                             <h4>Node.js <span class="meter" id="node">50%</span></h4>
                         </div>
                         <input type="range" name="nodejs" id="nodebar" value="72">
                     </div>
-                    <div class="skillbar" data-aos="fade-right">
+                    <div class="skillbar">
                         <div class="h1img">
                             <img src="/img/express2.png" alt="" class="rangeImg">
                             <h4>Express.js <span class="meter" id="express">50%</span></h4>
                         </div>
                         <input type="range" name="expressjs" id="expressbar" value="60">
                     </div>
-                    <div class="skillbar" data-aos="fade-right">
+                    <div class="skillbar">
                         <div class="h1img">
                             <img src="/img/mongodb.png" alt="" class="rangeImg">
                             <h4>MongoDb <span class="meter" id="mongodb">50%</span></h4>
                         </div>
                         <input type="range" name="mongodb" id="mongobar" value="50">
                     </div>
-                    <div class="skillbar" data-aos="fade-right">
+                    <div class="skillbar">
                         <div class="h1img">
                             <img src="/img/npm.png" alt="" class="rangeImg">
                             <h4>NPM <span class="meter" id="npm">50%</span></h4>
@@ -208,28 +233,28 @@
                 </div>
                 <div class="optskillbars1">
                     <h1 class="barsHead">Library and Frameworks</h1>
-                    <div class="skillbar1" data-aos="fade-left">
+                    <div class="skillbar1">
                         <div class="h1img">
                             <img src="/img/bootstrap.png" alt="" class="rangeImg">
                             <h4>BootStrap <span class="meter" id="bootstrap">50%</span></h4>
                         </div>
                         <input type="range" name="bootstrap" id="bootstrapbar" value="62">
                     </div>
-                    <div class="skillbar1" data-aos="fade-left">
+                    <div class="skillbar1">
                         <div class="h1img">
                             <img src="/img/jquery.png" alt="" class="rangeImg">
                             <h4>jQuery <span class="meter" id="jquery">50%</span></h4>
                         </div>
                         <input type="range" name="jquery" id="jquerybar" value="45">
                     </div>
-                    <div class="skillbar1" data-aos="fade-left">
+                    <div class="skillbar1">
                         <div class="h1img">
                             <img src="/img/mongoose.png" alt="" class="rangeImg">
                             <h4>Mongoose <span class="meter" id="mongoose">50%</span></h4>
                         </div>
                         <input type="range" name="mongoose" id="mongoosebar" value="52">
                     </div>
-                    <div class="skillbar1" data-aos="fade-left">
+                    <div class="skillbar1">
                         <div class="h1img">
                             <img src="/img/wordpress.png" alt="" class="rangeImg">
                             <h4>WordPress <span class="meter" id="wordpress">50%</span></h4>
@@ -499,6 +524,18 @@
         //     ]
         // });
 
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <script>
+        ScrollReveal({ reset: true }).reveal('.skillbar', { delay: 200 });
+        ScrollReveal({ reset: true }).reveal('.skillbar1', { delay: 200 });
+        ScrollReveal({ reset: true }).reveal('.AboutContainer', { delay: 0 });
+        ScrollReveal({ reset: true }).reveal('.boxes', { delay: 200 });
+        ScrollReveal({ reset: true }).reveal('.projectBoxes', { delay: 200 });
+        ScrollReveal({ reset: true }).reveal('#sectAbout', { delay: 200 });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
