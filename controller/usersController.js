@@ -1,7 +1,7 @@
 const fs = require('fs');
 const usersModel = require("./../model/userModel");
 
-const home = fs.readFileSync('index.html', 'utf-8');
+const home = fs.readFileSync('static/index.html', 'utf-8');
 const redirect = fs.readFileSync('static/redirect.html', 'utf-8');
 
 exports.homePage = (req, res) => {

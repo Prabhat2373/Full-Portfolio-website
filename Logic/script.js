@@ -1,7 +1,5 @@
 console.log("Welcome to Prabhat's Personal Website");
 
-
-
 $(document).ready(function () {
   $('.burger').click(() => {
     $('.navMenu').toggleClass('show');
@@ -26,7 +24,11 @@ $(document).scroll(function () {
   if (scrollHt > 500) {
     //   $('#arrow').fadeIn("fast");
     $('.arrowCont').removeClass('hide');
-  } else {
+  } 
+  else if (scrollHt > 3000){
+    $(".logoCont").hide()
+  }
+  else {
     //   $('#arrow').fadeOut("fast");
     $('.arrowCont').addClass('hide');
   }
