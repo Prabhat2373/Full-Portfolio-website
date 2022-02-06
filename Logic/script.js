@@ -33,16 +33,6 @@ $(document).scroll(function () {
     $('.arrowCont').addClass('hide');
   }
 });
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById('navbar').style.background = 'white';
-//   } else {
-//     document.getElementById('navbar').style.background = 'black';
-//   }
-// }
-// window.onscroll = function () {
-//   scrollFunction();
-// };
 
 let ageinp = document.getElementById("ageans");
 let date = new Date();
@@ -70,7 +60,6 @@ function activeMenu(){
 
 activeMenu();
 window.addEventListener("scroll",activeMenu);
-
 
 let inputs = document.querySelectorAll('input[type=range]');
 let meter = document.getElementsByClassName('meter');
