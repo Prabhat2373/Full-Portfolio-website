@@ -1,65 +1,46 @@
 console.log("Welcome to Prabhat's Personal Website");
 
-$(document).ready(function () {
-  $('.burger').click(() => {
-    $('.navMenu').toggleClass('show');
-    $('.burger').toggleClass('active');
-    $('#line').toggleClass('active');
-  });
-});
-$(document).on('click', (e) => {
-  if (
-    e.target.id !== 'navmen' &&
-    e.target.id !== 'brg' &&
-    e.target.id !== 'active' &&
-    e.target.id !== 'active'
-  ) {
-    $('.navMenu').removeClass('show');
-    $('.burger').removeClass('active');
-    $('#line').removeClass('active');
-  }
-});
-$(document).scroll(function () {
-  let scrollHt = $(this).scrollTop();
-  if (scrollHt > 500) {
-    //   $('#arrow').fadeIn("fast");
-    $('.arrowCont').removeClass('hide');
-  } 
-  else if (scrollHt > 3000){
-    $(".logoCont").hide()
-  }
-  else {
-    //   $('#arrow').fadeOut("fast");
-    $('.arrowCont').addClass('hide');
-  }
-});
+// $(document).scroll(function () {
+//   let scrollHt = $(this).scrollTop();
+//   if (scrollHt > 500) {
+//     //   $('#arrow').fadeIn("fast");
+//     $('.arrowCont').removeClass('hide');
+//   }
+//   else if (scrollHt > 3000){
+//     $(".logoCont").hide()
+//   }
+//   else {
+//     //   $('#arrow').fadeOut("fast");
+//     $('.arrowCont').addClass('hide');
+//   }
+// });
 
-let ageinp = document.getElementById("ageans");
+let ageinp = document.getElementById('ageans');
 let date = new Date();
 
-function YourAge(birthYear,birthMon){
-  let curMon = date.getMonth()+1
+function YourAge(birthYear, birthMon) {
+  let curMon = date.getMonth() + 1;
   let curYear = date.getFullYear();
-  
-  const currentAge = curYear-1 - birthYear;
+
+  const currentAge = curYear - 1 - birthYear;
   return currentAge;
 }
 // console.log(YourAge(2004))
-ageinp.innerHTML = `${YourAge(2004)} Years Old`
+ageinp.innerHTML = `${YourAge(2004)} Years Old`;
 
-const li = document.querySelectorAll(".links");
-const sect = document.querySelectorAll("section");
+const li = document.querySelectorAll('.links');
+const sect = document.querySelectorAll('section');
 
-function activeMenu(){
+function activeMenu() {
   let len = sect.length;
   // console.log(--len )
-  while(--len && window.scrollY + 97 < sect[len].offsetTop){}
-  li.forEach(el => el.classList.remove('active'));
+  while (--len && window.scrollY + 97 < sect[len].offsetTop) {}
+  li.forEach((el) => el.classList.remove('active'));
   li[len].classList.add('active');
 }
 
 activeMenu();
-window.addEventListener("scroll",activeMenu);
+window.addEventListener('scroll', activeMenu);
 
 let inputs = document.querySelectorAll('input[type=range]');
 let meter = document.getElementsByClassName('meter');
