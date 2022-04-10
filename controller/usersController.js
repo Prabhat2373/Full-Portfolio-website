@@ -5,7 +5,7 @@ const home = fs.readFileSync('static/index.html', 'utf-8');
 const redirect = fs.readFileSync('static/redirect.html', 'utf-8');
 
 exports.homePage = (req, res) => {
-  res.send(home);
+  res.status(200).send(home)
 };
 exports.submitUser = async (req, res) => {
   try {
@@ -20,4 +20,3 @@ exports.submitUser = async (req, res) => {
     });
   }
 };
-

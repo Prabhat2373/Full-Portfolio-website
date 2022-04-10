@@ -102,3 +102,7 @@ npm.innerHTML = npmbar.value;
 jquery.innerHTML = jquerybar.value;
 wordpress.innerHTML = wordpressbar.value;
 bootstrap.innerHTML = bootstrapbar.value;
+
+$(window).on("load", function () {
+  $(".center").delay(1000).fadeOut("fast")
+});

@@ -5,6 +5,6 @@ const route = express.Router();
 const {homePage , submitUser} = usersController;
 
 route.route("/").get(homePage);
-route.route("/contactForm").post(submitUser);
+route.route("/contact").post(submitUser);
 
 module.exports = route;
